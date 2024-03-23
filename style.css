@@ -26,7 +26,7 @@ body {
   background-color: var(--yellow);
   font-family: "Figtree-VariableFont_wght", sans-serif;
 }
-h3 {
+h1 {
   font-family: "Figtree-ExtraBold", sans-serif;
   font-size: 20px;
   color: var(--black);
@@ -57,7 +57,7 @@ article:hover {
   box-shadow: 16px 16px 0 0 var(--black);
   cursor: pointer;
 }
-article:hover h3 {
+article:hover h1 {
   color: var(--yellow);
 }
 
@@ -112,7 +112,7 @@ article:hover h3 {
   article {
     font-size: 1rem;
   }
-  h3 {
+  h1 {
     font-size: 24px;
   }
 }
