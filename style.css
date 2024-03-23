@@ -1,0 +1,118 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Figtree-ExtraBold";
+  src: url("assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Figtree-VariableFont_wght";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+}
+
+body {
+  background-color: var(--yellow);
+  font-family: "Figtree-VariableFont_wght", sans-serif;
+}
+h3 {
+  font-family: "Figtree-ExtraBold", sans-serif;
+  font-size: 20px;
+  color: var(--black);
+
+  transition: color 0.3s ease-in-out;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+article {
+  background-color: var(--white);
+  max-width: 384px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid var(--black);
+  box-shadow: 8px 8px 0 0 var(--black);
+  font-size: 0.875rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+article:hover {
+  box-shadow: 16px 16px 0 0 var(--black);
+  cursor: pointer;
+}
+article:hover h3 {
+  color: var(--yellow);
+}
+
+.blog__image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.content__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0;
+  line-height: 150%;
+  color: var(--grey);
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-family: "Figtree-ExtraBold", sans-serif;
+  padding: 4px 12px;
+  background-color: var(--yellow);
+  color: var(--black);
+  display: inline-block;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+.published__date {
+  font-size: 0.75rem;
+  color: var(--black);
+}
+.author {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 12px;
+}
+
+.author img {
+  width: 32px;
+}
+
+/* For larger breakpoints */
+
+@media screen and (min-width: 376px) {
+  .tag {
+    font-size: 14px;
+  }
+  .published__date {
+    font-size: 14px;
+  }
+  article {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 24px;
+  }
+}
